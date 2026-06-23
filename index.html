@@ -526,7 +526,7 @@ footer{text-align:center;padding:30px 16px;color:var(--concrete-dim);font-family
    CONEXIÓN CON GOOGLE  ·  ¡CONFIGURA ESTAS DOS LÍNEAS!
    ================================================================= */
 // 1) Pega aquí la dirección (URL) de tu app web de Apps Script. Debe terminar en /exec
-const API_URL = 'https://script.google.com/macros/s/AKfycby6Uh15d4sE--WrCZNq1qrFlQdWyyuTQCHr4yNjasImnPw4GjqTVfYooZs5Af1pxZIf/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbx1S7Yy1OClwsrXBSYAhIUIB2dTyC2yiIYkPd2elAuXLiHSTJFuGIkhB-eN6DcBIZ9c/exec';
 // 2) Escribe la MISMA clave secreta que pusiste en el código de Apps Script
 const API_KEY = 'bethel-secreto';
 /* ================================================================= */
@@ -543,7 +543,7 @@ const CACHE_KEY='bethel_cache_v2';
 let data=structuredClone(DEFAULTS);
 let selMonth=monthKey(todayISO());
 let online=false;
-const configured = API_URL.indexOf('http')===0 && API_URL.indexOf('PEGA_AQUI')<0;
+const configured = API_URL.indexOf('http')===0;
 
 function cacheSave(){try{localStorage.setItem(CACHE_KEY,JSON.stringify(data));}catch(e){}}
 function cacheLoad(){try{const r=localStorage.getItem(CACHE_KEY);return r?JSON.parse(r):null;}catch(e){return null;}}
